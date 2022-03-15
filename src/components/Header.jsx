@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, Outlet } from "react-router-dom";
 import styled from "styled-components";
 
 const HeaderWrapper = styled.div`
@@ -46,17 +47,16 @@ const Header = ({ style }) => {
   return (
     <HeaderWrapper style={style}>
       <InnerHeaderWrapper>
-        <div>logo</div>
+        <Link to="/">
+          <div>logo</div>
+        </Link>
         <Nav>
           <ul>
             <li>
-              <a href="#">Some Link</a>
+              <Link to="meet-the-team">Meet The Team</Link>
             </li>
             <li>
-              <a href="#">Some Link</a>
-            </li>
-            <li>
-              <a href="#">Some Link</a>
+              <Link to="contact-us">Contact Us</Link>
             </li>
           </ul>
           <NavButtons>
