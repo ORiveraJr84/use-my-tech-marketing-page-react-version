@@ -1,1 +1,560 @@
 @import "./utils/style/reset.css";
+
+/************************* Variables ****************************/
+:root {
+  /************* Colors *************/
+  --brightest-color: #f2f2f2;
+  --faded-brightest-color: #f2f2f260;
+  --main-highlight-color: #4ecbd9;
+  --main-highlight-color-hover: #4ecbd9d6;
+  --secondary-highlight-color: #f1a032;
+  --main-midtone-color: #61748c;
+  --faded-main-midtone-color: #61748c41;
+  --secondary-midtone-color: #223f59;
+  --faded-secondary-midtone-color: rgba(34, 63, 89, 0);
+  --darkest-color: #141e26;
+  --faded-darkest-color: #141e2627;
+  --text-color: #333333;
+  --faded-text-color: #3333331e;
+
+  /************* Fonts *************/
+  --main-font: proxima-nova, sans-serif;
+  --heading-font: source-serif-pro, serif;
+
+  /************* Misc *************/
+  --corner: 7px;
+  --opacity: 30%;
+}
+
+/************************* ^^^^^^ Variables ^^^^^^^ ****************************/
+
+/* Add CSS styling here */
+* {
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  font-weight: bold;
+  color: var(--secondary-midtone-color);
+}
+
+a,
+p {
+  font-family: var(--main-font);
+  line-height: 1.35rem;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--brightest-color);
+}
+
+button {
+  background-color: var(--main-highlight-color);
+  border-radius: var(--corner);
+  color: var(--brightest-color);
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: var(--main-highlight-color-hover);
+}
+
+button.reverse-btn {
+  border: 1.5px solid var(--text-color);
+  padding: 0.34rem 1rem;
+  color: var(--text-color);
+}
+
+button.reverse-btn:hover {
+  background-color: var(--secondary-highlight-color);
+}
+
+.container {
+  max-width: 75vw;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+nav.burger-nav {
+  display: none;
+}
+
+.active-page {
+  border-bottom: 4px solid var(--main-highlight-color);
+}
+
+.ft-companies {
+  padding: 20px 0px;
+}
+
+.ft-companies > .container > h5 > br {
+  display: none;
+}
+
+.main-body > .container > h2 {
+  text-align: center;
+}
+
+.main-body > .container > h2 > br {
+  display: none;
+}
+
+.container > h5 {
+  text-align: center;
+  font-family: var(--main-font);
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+
+.ft-companies {
+  margin-top: 1vw;
+}
+
+.company-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6vh;
+  padding: 0px 8vw;
+  margin: 1vw;
+  cursor: pointer;
+}
+
+.company-logos svg {
+  width: auto;
+  height: 3.5vw;
+  fill: var(--secondary-midtone-color);
+  opacity: var(--opacity);
+}
+
+.company-logos svg:hover {
+  opacity: 80%;
+}
+
+svg.horizontal {
+  height: 2.6vw;
+  width: auto;
+}
+
+#facebook-logo,
+#instagram-logo {
+  height: 2.7vw;
+}
+
+#underarmor-logo {
+  margin-top: 1vh;
+}
+
+#nike-logo {
+  height: 1.8vw;
+  margin-right: -2vw;
+}
+
+hr {
+  color: var(--secondary-midtone-color);
+  opacity: var(--opacity);
+}
+
+.main-body {
+  padding: 3vh;
+  border-bottom: 1px solid var(--faded-main-midtone-color);
+}
+
+.main-body > .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 3vw;
+}
+
+.container > h2 {
+  margin-bottom: 8vh;
+}
+
+.main-body > .container > .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3vh 0;
+  margin-bottom: 1.5vw;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+
+.image > img {
+  width: 12.25rem;
+}
+
+#letter {
+  width: 8rem;
+}
+
+.text-section > h3 {
+  margin-bottom: 2vh;
+}
+
+.main-body > .container > .row > .text-section {
+  width: 60%;
+}
+
+.text-section > p > span {
+  color: var(--main-highlight-color);
+}
+
+#main-button {
+  padding: 0.75rem 7rem;
+}
+
+#main-button:hover {
+  background-color: var(--secondary-highlight-color);
+}
+
+.pre-footer {
+  background-color: var(--secondary-midtone-color);
+  padding: 3vw 0;
+}
+
+.pre-footer > .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pre-footer > .container > h3 {
+  color: var(--brightest-color);
+  margin-right: 2vw;
+  font-size: 2.5rem;
+}
+
+footer footer footer a footer p {
+  font-size: 0.75rem;
+}
+
+footer > .container > .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .row:nth-child(2) {
+  padding-top: 1rem;
+}
+
+@media only screen and (max-width: 1630px) {
+  .hero {
+    background-position: 44vw -24vw;
+  }
+}
+
+@media only screen and (max-width: 1590px) {
+  .main-body > .container > h2 > br {
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 1480px) {
+  .hero {
+    background-position: 44vw -20vw;
+  }
+}
+
+@media only screen and (max-width: 1410px) {
+  .hero {
+    background-position: 44vw -15vw;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .hero {
+    background-position: 44vw -10vw;
+  }
+}
+
+@media only screen and (max-width: 1215px) {
+  .main-nav {
+    display: none;
+  }
+
+  nav.burger-nav {
+    display: inline-block;
+  }
+
+  nav.burger-nav > svg {
+    fill: var(--brightest-color);
+    width: 2rem;
+    height: auto;
+  }
+
+  nav.burger-nav > svg:hover {
+    cursor: pointer;
+  }
+
+  .hero {
+    background-image: none;
+    background-size: 100%;
+    background-position: 0 0;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-text > h3 {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-text > h3 > br {
+    display: none;
+  }
+
+  .hero-text > p {
+    text-align: center;
+  }
+
+  .hero-text > .button-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-body > .container > h2 {
+    font-size: 5vw;
+    margin-bottom: 1vw;
+  }
+
+  .main-body > .container > .row {
+    flex-direction: column-reverse;
+    margin-top: 3vw;
+  }
+
+  .main-body > .container > .row > .text-section {
+    width: 100%;
+    margin-top: 3vw;
+  }
+
+  .main-body > .container > .row > .text-section > h3 {
+    text-align: center;
+  }
+
+  .image > img {
+    width: 9.25rem;
+  }
+
+  #letter {
+    width: 6rem;
+  }
+
+  #magnifying-glass {
+    order: 1;
+  }
+
+  .container > .row > .column > a {
+    line-height: 1.65rem;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .pre-footer > .container > h3 {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .company-logos > svg:last-of-type {
+    display: none;
+  }
+
+  #main-button {
+    display: none;
+  }
+
+  .testimonials {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .warning-message > .container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .warning-message > .container > .reverse-btn {
+  }
+
+  footer {
+    padding: 0.75rem 0;
+  }
+
+  footer > .container > .row {
+    padding-top: 0;
+  }
+
+  footer > .container > .row > .column {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 845px) {
+  .ft-companies,
+  body > hr {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  .warning-message {
+    padding-bottom: 0.5rem;
+  }
+
+  .warning-message > div.container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  .warning-message > div.container > p {
+    text-align: center;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .hero-text > h3,
+  .button-group > .reverse-btn,
+  #privacy-policy-and-terms,
+  .pre-footer > .container > h3 {
+    display: none;
+  }
+
+  .hero-text > p {
+    margin: 0 0 1.5rem 0;
+    line-height: 1rem;
+  }
+
+  footer > .container > .row:last-of-type {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/************************* Team Page ****************************/
+
+.team-main-body > h2 {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.main-body > div.team-container {
+  height: auto;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 2rem;
+  align-items: stretch;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: space-between;
+  box-shadow: 0 0px 8px 0 var(--faded-darkest-color),
+    0 0px 30px 0 var(--faded-text-color);
+}
+
+.card > img {
+  width: 100%;
+  height: auto;
+}
+
+#juan-card > .team-text-section > h3 {
+  font-size: 1.1vw;
+  line-height: 1.38vw;
+}
+
+#Sara-pic {
+  filter: brightness(130%);
+}
+
+#Chinchilla-pic {
+  transform: rotate(-90deg);
+}
+
+.team-text-section > h3 {
+  /* text-align: center; */
+  margin-top: 1rem;
+  font-family: var(--main-font);
+  font-size: 1.4vw;
+  color: var(--text-color);
+}
+
+.team-text-section > h4 {
+  /* text-align: center; */
+  margin-bottom: 1rem;
+  font-family: var(--main-font);
+  color: var(--faded-main-midtone-color);
+}
+
+@media only screen and (max-width: 1100px) {
+  .main-body > div.team-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .team-text-section > h3 {
+    font-size: 3vw;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .main-body > div.team-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .team-text-section > h3 {
+    font-size: 6vw;
+  }
+}
